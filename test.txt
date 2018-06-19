@@ -1,0 +1,13 @@
+            # url = "http://www.nba.com/video/gamerecaps"
+            # document = open(url)
+            # content = document.read
+            # parsed_content = Nokogiri::HTML(content)
+            # parsed_content.css('.view-mode-full').each do |s|
+            #     info = s.css('script').text.split(" ")
+            #     tagId = info.find_index("relatedTagId:")
+            #     tagIdValue = tagId + 1
+            #     @key = info[tagIdValue][1..info[tagIdValue].length-3]
+            # end 
+            # api_url = "https://api.nba.net/0/league/video?count=40&primary="+"#{@key}"+"accessToken=nbainternal|3830242580404678b2552bbdd03b73ee"
+            # website = `curl #{api_url}`  
+            # @hash = JSON.parse(website)

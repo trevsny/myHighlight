@@ -1,0 +1,63 @@
+<div id = "main">
+<h1>MyHighlight</h1>
+    <div id = "form" class = "row">
+        <div>
+            <form action = "/guests" method = "get"> 
+                <text type = "search" name = "search">    
+                <select name = "category">
+                    <option value = "nba">NBA Game Recaps</option>
+                    <option value = "mlb">MLB Daily Recaps</option>
+                </select>
+                <input id = "button" type = "submit" value = "Go">
+            </form>
+        </div>
+    </div>
+</div>
+<div id = "both">
+    <div id = 'left_column'>
+    <!--<video width = "100%" height = "300px" controls>
+        <source src="http://nba.cdn.turner.com/nba/big/video/2018/06/09/caption/d75ab2e1-0dea-4613-a424-d34694608b02.nba_2132856_1920x1080_5904.mp4"> 
+        <source src = "http://www.nba.com/video/2018/06/03/0041700402-cle-gsw-game-2-recap">
+    </video>-->
+    </div>
+    <div id = "right_column">
+    <!-- NBA Game Recaps -->
+    <!--Use a video tag??-->
+     <% if @hash %>
+        <% @hash['response']['result'][0]['content'].each do |obj| %>
+            
+               <div>
+                    <input class = "add_button" type = "submit" value = "Add">
+                   
+                    <img src = "<%= obj['listImage']['source']%>">
+                    <a href = "http://www.nba.com/video/<%= obj['videoId'] %>"><%= obj['title'] %></a>
+                    <!--<video width = "100%" height = "300px" controls>
+                        <source src = "http://www.nba.com/video/<%= obj['videoId'] %>"<%= obj['title'] %></source>
+                    </video>-->
+                    <p class = "length">Length: <%=Time.at(obj['trt']).utc.strftime("%M:%S") %></p>
+                </div>
+            
+        <% end %>
+    <% end %>
+    <!-- MLB Game Recaps -->
+    <% if @mlb %>
+        <% @mlb['docs'].each do |game| %>
+            <div>
+                <input class = "add_button" type = "submit" value = "Add">
+                <img src = "<%= game['image']['cuts'][0]['src']%>"/>
+                <a href = "<%= game['url']%>"><%= game['title'] %></a>
+                <!--<video width = "100%" height = "300px">
+                    <source src = "<%= game['url'] %>">
+                </video>-->
+                <p class = "length">Length: <%= game['duration'] %></p>
+                
+            </div>
+        <% end %>
+    <% end %>
+
+
+    <!-- Laker news -->
+    <!-- NFL Game Recaps -->
+
+    </div>
+</div>

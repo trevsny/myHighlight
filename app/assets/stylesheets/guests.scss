@@ -1,0 +1,74 @@
+// Place all the styles related to the Guests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+    font-size: 40px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    position: fixed;
+    text-align: left;
+    display: inline-block;
+}
+
+#left_column {
+    // visibility: hidden;
+    display: inline-block;
+    background-color: rgba(251, 226, 226, 0.5);
+    width: 40%;
+    height: fit-content;
+    border: solid 1px black;
+    height: 500px;
+    vertical-align: top;
+
+}
+
+#right_column {
+    // visibility: hidden;
+    background-color: rgba(251, 226, 226, 0.5);
+    display: inline-block;
+    width: 40%;
+    border: solid 1px black;
+    height: 500px;
+    margin-left: 5%;
+    overflow: auto;
+
+}
+
+#both {
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 150px;
+}
+.add_button {
+    display: inline-block;
+    margin-top: 80px;
+    vertical-align: top;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+img {
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+form {
+    text-align: right;
+    position: relative;
+    top: 40px;
+}
+
+a{
+    color: black;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.length {
+    text-align: center;
+}
