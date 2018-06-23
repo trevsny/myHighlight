@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple web application to aggregate game highlights from different professional sports into one place.  
 
-Things you may want to cover:
+The goal is to eventually have every pro sport available on there but most of the leagues do not have public APIs.
+In fact the two I currently have working are APIs they internally use, I was able to find the link in the developer console under XHR and then by traversing the JSON find exactly what I wanted.  This also made it difficult to get the videos to show up on my web app.  Thus, right now you have to click on an href that opens a new tab that then takes you to the site the video is stored on.  
 
-* Ruby version
+* Ruby version 4.2.7
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Database - mySQL
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Future goals: 
+* All major professional sports available
+
+* Functionality to save playlists to a database
+
+* Have videos show up on my web app without having to navigate to a third-party site
+
+
