@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   resources :users
   resources :sessions
+  get 'guests/nba' => 'guests#nba'
+  get 'guests/mlb' => 'guests#mlb'
   resources :guests
-  get 'guests/curl' => 'guests#curl'
-  post 'guests/results' => 'guests#show_search_results'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

@@ -1,62 +1,85 @@
 // Place all the styles related to the Guests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#main {
+    position: relative;
+}
 h1 {
-    font-size: 40px;
+    font-size: 8vw;
     font-family: Helvetica, Arial, sans-serif;
     color: white;
-    position: fixed;
     text-align: left;
+    font-family: 'Shrikhand', cursive;
+    letter-spacing: 3px;
+    margin-top: 0px;
+}
+h2 {
+    font-size: 5vw;
+    color: white;
     display: inline-block;
+
+}
+h5 {
+    font-size: 2vw;
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    letter-spacing: 1px;
+    position: relative;
+    bottom: 55px;
+    margin-left: 25%;
+}
+h6 {
+    font-size: 1vw;
+    color: white;
+    position: relative;
+    bottom: 30px;
+}
+#ajax_message {
+    text-align: center;
 }
 
 #left_column {
-    // visibility: hidden;
     display: inline-block;
-    background-color: rgba(251, 226, 226, 0.5);
-    width: 40%;
-    height: fit-content;
-    border: solid 1px black;
-    height: 500px;
+    width: 50%;
     vertical-align: top;
-
+    overflow: auto;
+    height: 900px;
 }
 
 #right_column {
-    // visibility: hidden;
-    background-color: rgba(251, 226, 226, 0.5);
-    display: inline-block;
-    width: 40%;
-    border: solid 1px black;
-    height: 500px;
-    margin-left: 5%;
+    display: block;
+    width: 100%;
+    margin: auto;
+    white-space: nowrap;
     overflow: auto;
-
 }
-
+.remove {
+    margin-bottom: 35px;
+}
 #both {
     width: 100%;
     height: fit-content;
-    margin: auto;
-    margin-top: 150px;
-}
-.add_button {
-    display: inline-block;
-    margin-top: 80px;
-    vertical-align: top;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    margin-top: -72px;
+    text-align: center;
 }
 
-
-img {
-    width: 300px;
-    display: inline-block;
-    margin: auto;
-    border-radius: 5px;
-    margin-top: 5px;
+.search_games {
+    padding: 11px;
+    border-radius: 22px;
+    background: darkgray;
+    font-size: 2vw;
+    font-family: 'Glegoo', serif;
 }
+.search_games:hover {
+    background: lightgrey;
+    cursor: pointer;
+}
+nav {
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+}
+
 form {
     text-align: right;
     position: relative;
@@ -64,11 +87,21 @@ form {
 }
 
 a{
-    color: black;
+    color: white;
     display: block;
     margin: auto;
     text-align: center;
+    font-size: 2vw;
 }
-.length {
-    text-align: center;
+
+p {
+    color: white;
+    font-size: 3vw;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline;
 }

@@ -1,0 +1,25 @@
+.newDiv {
+    width: 250px;
+    display: inline-block;
+    white-space: normal;
+    margin-bottom: 10px;
+}
+.add_button{
+    padding: 11px;
+    border-radius: 4px;
+    background: whitesmoke;
+    font-family: inherit;
+    font-size: 2vw;
+    width: 100%;
+}
+.length {
+    text-align: center;
+    font-size: 2vw;
+}
+img {
+    width: 100%;
+    max-height: 250px;
+    display: inline-block;
+    margin: auto;
+    border-radius: 5px;
+}
