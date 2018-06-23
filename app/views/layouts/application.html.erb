@@ -5,9 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
- 
+<link href="https://fonts.googleapis.com/css?family=Glegoo|Shrikhand" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+  
 <!--navbar-->
 <!--main content -->
 <div id = "base" class="container">
@@ -15,6 +17,5 @@
   <!-- Content here -->
 <%= yield %>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>

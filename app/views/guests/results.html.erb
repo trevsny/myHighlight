@@ -1,0 +1,26 @@
+<!--MLB-->
+<% if @mlb %>
+        <% @mlb['docs'].each do |game| %>
+            <div class = "newDiv">
+                <img src = "<%= game['image']['cuts'][0]['src']%>"/>
+                <a target = "_blank" href = "<%= game['url']%>"><%= game['title'] %></a>
+                <p class = "length">Length: <%= game['duration'] %></p>                
+                <input class = "add_button" type = "button" value = "Add">
+            </div>
+        <% end %>
+<% elsif @mlb == nil %>
+    <%= @error %>
+<% end %>
+<!--NBA-->
+<% if @hash %>
+        <% @hash['response']['result'][0]['content'].each do |obj| %>
+                <div class = "newDiv">
+                    <img src = "<%= obj['listImage']['source']%>">
+                    <a target = "_blank" href = "http://www.nba.com/video/<%= obj['videoId'] %>"><%= obj['title'] %></a>
+                    <p class = "length">Length: <%=Time.at(obj['trt']).utc.strftime("%M:%S") %></p>
+                    <input class = "add_button" type = "submit" value = "Add">
+                </div>            
+        <% end %>
+<% elsif @hash == nil %>
+    <%= @error %>
+<% end %>
